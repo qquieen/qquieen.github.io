@@ -177,6 +177,11 @@
             overflow-x: auto;
         }
         
+        .command-box pre {
+            margin: 0;
+            white-space: pre-wrap;
+        }
+        
         .command-box code {
             background: transparent;
             color: #f8f8f2;
@@ -221,20 +226,23 @@
                 
                 <h3>安装方法 | Installation</h3>
                 <div class="command-box">
-                    <code># 使用 pip 安装 | Install using pip<br>
-pip install yt-dlp<br><br>
-# 或使用 brew (macOS) | Or using brew (macOS)<br>
-brew install yt-dlp</code>
+                    <pre><code># 使用 pip 安装 | Install using pip
+pip install yt-dlp
+
+# 或使用 brew (macOS) | Or using brew (macOS)
+brew install yt-dlp</code></pre>
                 </div>
                 
                 <h3>基本使用 | Basic Usage</h3>
                 <div class="command-box">
-                    <code># 下载视频（最佳质量） | Download video (best quality)<br>
-yt-dlp "VIDEO_URL"<br><br>
-# 下载指定格式 | Download specific format<br>
-yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]" "VIDEO_URL"<br><br>
-# 下载播放列表 | Download playlist<br>
-yt-dlp "PLAYLIST_URL"</code>
+                    <pre><code># 下载视频（最佳质量） | Download video (best quality)
+yt-dlp "VIDEO_URL"
+
+# 下载指定格式 | Download specific format
+yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]" "VIDEO_URL"
+
+# 下载播放列表 | Download playlist
+yt-dlp "PLAYLIST_URL"</code></pre>
                 </div>
                 
                 <a href="https://github.com/yt-dlp/yt-dlp" class="github-link" target="_blank">📦 访问 GitHub 仓库 | Visit GitHub Repository</a>
@@ -261,8 +269,8 @@ yt-dlp "PLAYLIST_URL"</code>
                 
                 <h3>安装方法 | Installation</h3>
                 <div class="command-box">
-                    <code># 使用 pip 安装 | Install using pip<br>
-pip install youtube-dl</code>
+                    <pre><code># 使用 pip 安装 | Install using pip
+pip install youtube-dl</code></pre>
                 </div>
                 
                 <a href="https://github.com/ytdl-org/youtube-dl" class="github-link" target="_blank">📦 访问 GitHub 仓库 | Visit GitHub Repository</a>
@@ -311,11 +319,12 @@ pip install youtube-dl</code>
                 
                 <h3>基本使用 | Basic Usage</h3>
                 <div class="command-box">
-                    <code>from pytube import YouTube<br><br>
-# 下载视频 | Download video<br>
-yt = YouTube('VIDEO_URL')<br>
-stream = yt.streams.get_highest_resolution()<br>
-stream.download()</code>
+                    <pre><code>from pytube import YouTube
+
+# 下载视频 | Download video
+yt = YouTube('VIDEO_URL')
+stream = yt.streams.get_highest_resolution()
+stream.download()</code></pre>
                 </div>
                 
                 <a href="https://github.com/pytube/pytube" class="github-link" target="_blank">📦 访问 GitHub 仓库 | Visit GitHub Repository</a>
