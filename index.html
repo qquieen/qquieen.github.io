@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GitHub上可用的YouTube视频下载工具 - YouTube Video Download Tools on GitHub">
+    <title>YouTube视频下载工具 | YouTube Video Download Tools</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .intro {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+        
+        .tool-card {
+            background: #fff;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .tool-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .tool-card h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        
+        .tool-card .badges {
+            margin-bottom: 15px;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            margin-right: 8px;
+            margin-bottom: 5px;
+        }
+        
+        .badge-primary {
+            background: #667eea;
+            color: white;
+        }
+        
+        .badge-success {
+            background: #28a745;
+            color: white;
+        }
+        
+        .badge-info {
+            background: #17a2b8;
+            color: white;
+        }
+        
+        .tool-card h3 {
+            color: #495057;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        
+        .tool-card ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .tool-card li {
+            margin-bottom: 8px;
+        }
+        
+        .github-link {
+            display: inline-block;
+            background: #24292e;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background 0.3s ease;
+        }
+        
+        .github-link:hover {
+            background: #667eea;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+        
+        .warning h3 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            background: #f8f9fa;
+            padding: 30px;
+            text-align: center;
+            color: #6c757d;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        code {
+            background: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #e83e8c;
+        }
+        
+        .command-box {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+        
+        .command-box pre {
+            margin: 0;
+            white-space: pre-wrap;
+        }
+        
+        .command-box code {
+            background: transparent;
+            color: #f8f8f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎬 YouTube视频下载工具</h1>
+            <p>YouTube Video Download Tools on GitHub</p>
+        </header>
+        
+        <div class="content">
+            <div class="intro">
+                <h2>关于 YouTube 视频下载工具 | About YouTube Video Download Tools</h2>
+                <p><strong>中文：</strong> 以下是GitHub上最受欢迎和活跃维护的YouTube视频下载工具。这些工具可以帮助您下载和保存YouTube视频，支持多种格式和质量选项。</p>
+                <p><strong>English:</strong> Below are the most popular and actively maintained YouTube video download tools on GitHub. These tools can help you download and save YouTube videos with various format and quality options.</p>
+            </div>
+            
+            <div class="tool-card">
+                <h2>1. yt-dlp</h2>
+                <div class="badges">
+                    <span class="badge badge-primary">最推荐 Recommended</span>
+                    <span class="badge badge-success">活跃维护 Active</span>
+                    <span class="badge badge-info">功能强大 Feature-rich</span>
+                </div>
+                
+                <h3>简介 | Description</h3>
+                <p><strong>中文：</strong> yt-dlp 是 youtube-dl 的一个功能增强版分支，支持更多网站、更快的下载速度和更多新特性。它是目前最活跃和功能最强大的YouTube视频下载工具。</p>
+                <p><strong>English:</strong> yt-dlp is a feature-rich fork of youtube-dl with additional features, better performance, and support for more sites. It's currently the most actively maintained and powerful YouTube downloader.</p>
+                
+                <h3>主要特性 | Key Features</h3>
+                <ul>
+                    <li>支持1000+视频网站（包括YouTube、Bilibili等） | Supports 1000+ video sites</li>
+                    <li>下载速度更快，支持并行下载 | Faster downloads with parallel fragment downloading</li>
+                    <li>支持SponsorBlock自动跳过赞助内容 | SponsorBlock integration</li>
+                    <li>定期更新以应对YouTube的限制 | Regular updates to counter YouTube restrictions</li>
+                    <li>支持字幕下载和嵌入 | Subtitle download and embedding</li>
+                    <li>支持播放列表和频道下载 | Playlist and channel download support</li>
+                </ul>
+                
+                <h3>安装方法 | Installation</h3>
+                <div class="command-box">
+                    <pre><code># 使用 pip 安装 | Install using pip
+pip install yt-dlp
+
+# 或使用 brew (macOS) | Or using brew (macOS)
+brew install yt-dlp</code></pre>
+                </div>
+                
+                <h3>基本使用 | Basic Usage</h3>
+                <div class="command-box">
+                    <pre><code># 下载视频（最佳质量） | Download video (best quality)
+yt-dlp "VIDEO_URL"
+
+# 下载指定格式 | Download specific format
+yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]" "VIDEO_URL"
+
+# 下载播放列表 | Download playlist
+yt-dlp "PLAYLIST_URL"</code></pre>
+                </div>
+                
+                <a href="https://github.com/yt-dlp/yt-dlp" class="github-link" target="_blank">📦 访问 GitHub 仓库 | Visit GitHub Repository</a>
+            </div>
+            
+            <div class="tool-card">
+                <h2>2. youtube-dl</h2>
+                <div class="badges">
+                    <span class="badge badge-primary">经典工具 Classic</span>
+                    <span class="badge badge-info">稳定 Stable</span>
+                </div>
+                
+                <h3>简介 | Description</h3>
+                <p><strong>中文：</strong> youtube-dl 是最原始和最知名的YouTube视频下载工具。虽然更新速度不如 yt-dlp，但仍然是一个可靠的选择。</p>
+                <p><strong>English:</strong> youtube-dl is the original and most well-known YouTube video downloader. While updates are less frequent than yt-dlp, it remains a reliable choice.</p>
+                
+                <h3>主要特性 | Key Features</h3>
+                <ul>
+                    <li>支持多个视频平台 | Supports multiple video platforms</li>
+                    <li>成熟稳定的代码库 | Mature and stable codebase</li>
+                    <li>广泛的社区支持 | Wide community support</li>
+                    <li>详细的文档 | Comprehensive documentation</li>
+                </ul>
+                
+                <h3>安装方法 | Installation</h3>
+                <div class="command-box">
+                    <pre><code># 使用 pip 安装 | Install using pip
+pip install youtube-dl</code></pre>
+                </div>
+                
+                <a href="https://github.com/ytdl-org/youtube-dl" class="github-link" target="_blank">📦 访问 GitHub 仓库 | Visit GitHub Repository</a>
+            </div>
+            
+            <div class="tool-card">
+                <h2>3. Tartube</h2>
+                <div class="badges">
+                    <span class="badge badge-primary">图形界面 GUI</span>
+                    <span class="badge badge-success">易用 User-friendly</span>
+                </div>
+                
+                <h3>简介 | Description</h3>
+                <p><strong>中文：</strong> Tartube 是一个带有图形界面的YouTube下载器，基于 youtube-dl 和 yt-dlp。适合不习惯命令行的用户。</p>
+                <p><strong>English:</strong> Tartube is a GUI front-end for youtube-dl and yt-dlp. Perfect for users who prefer graphical interfaces over command-line tools.</p>
+                
+                <h3>主要特性 | Key Features</h3>
+                <ul>
+                    <li>友好的图形用户界面 | User-friendly graphical interface</li>
+                    <li>支持频道和播放列表管理 | Channel and playlist management</li>
+                    <li>自动下载新视频 | Automatic download of new videos</li>
+                    <li>跨平台支持 (Windows, Linux, macOS) | Cross-platform support</li>
+                </ul>
+                
+                <a href="https://github.com/axcore/tartube" class="github-link" target="_blank">📦 访问 GitHub 仓库 | Visit GitHub Repository</a>
+            </div>
+            
+            <div class="tool-card">
+                <h2>4. PyTube</h2>
+                <div class="badges">
+                    <span class="badge badge-info">Python库 Library</span>
+                    <span class="badge badge-success">易集成 Easy Integration</span>
+                </div>
+                
+                <h3>简介 | Description</h3>
+                <p><strong>中文：</strong> PyTube 是一个轻量级的Python库，无需外部依赖即可下载YouTube视频。适合开发者集成到自己的项目中。</p>
+                <p><strong>English:</strong> PyTube is a lightweight Python library for downloading YouTube videos without external dependencies. Ideal for developers to integrate into their projects.</p>
+                
+                <h3>主要特性 | Key Features</h3>
+                <ul>
+                    <li>纯Python实现，无外部依赖 | Pure Python with no dependencies</li>
+                    <li>简单易用的API | Simple and easy-to-use API</li>
+                    <li>支持字幕下载 | Caption/subtitle download support</li>
+                    <li>适合程序集成 | Great for programmatic use</li>
+                </ul>
+                
+                <h3>基本使用 | Basic Usage</h3>
+                <div class="command-box">
+                    <pre><code>from pytube import YouTube
+
+# 下载视频 | Download video
+yt = YouTube('VIDEO_URL')
+stream = yt.streams.get_highest_resolution()
+stream.download()</code></pre>
+                </div>
+                
+                <a href="https://github.com/pytube/pytube" class="github-link" target="_blank">📦 访问 GitHub 仓库 | Visit GitHub Repository</a>
+            </div>
+            
+            <div class="warning">
+                <h3>⚠️ 重要提示 | Important Notes</h3>
+                <ul>
+                    <li><strong>中文：</strong> 请遵守YouTube的服务条款和当地法律法规。下载视频仅供个人学习和研究使用。</li>
+                    <li><strong>English:</strong> Please comply with YouTube's Terms of Service and local laws. Download videos only for personal study and research purposes.</li>
+                    <li><strong>中文：</strong> 这些工具会定期更新以应对YouTube的变化。如果遇到问题，请确保使用最新版本。</li>
+                    <li><strong>English:</strong> These tools are regularly updated to adapt to YouTube's changes. If you encounter issues, make sure you're using the latest version.</li>
+                    <li><strong>中文：</strong> 不要用于商业用途或侵犯版权。</li>
+                    <li><strong>English:</strong> Do not use for commercial purposes or copyright infringement.</li>
+                </ul>
+            </div>
+            
+            <div class="tool-card">
+                <h2>其他有用的工具 | Other Useful Tools</h2>
+                <ul>
+                    <li><strong>FFmpeg：</strong> 视频格式转换和处理工具 | Video format conversion and processing tool</li>
+                    <li><strong>yt-dlp-GUI：</strong> yt-dlp 的图形界面版本 | GUI version of yt-dlp</li>
+                    <li><strong>youtube-dl-gui：</strong> youtube-dl 的跨平台图形界面 | Cross-platform GUI for youtube-dl</li>
+                </ul>
+            </div>
+        </div>
+        
+        <footer>
+            <p>本页面提供的信息仅供参考。请负责任地使用这些工具。</p>
+            <p>The information on this page is for reference only. Please use these tools responsibly.</p>
+            <p style="margin-top: 15px; opacity: 0.7;">© 2025 | Hosted on GitHub Pages</p>
+        </footer>
+    </div>
+</body>
+</html>
